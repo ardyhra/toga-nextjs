@@ -18,6 +18,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -44,6 +47,7 @@ main {
   padding: 2rem 5%;
   max-width: 1200px;
   margin: 0 auto;
+  flex-grow: 1;
 }
 
 footer {
@@ -150,6 +154,19 @@ footer {
 }
 .btn-add:hover { background-color: #248a7e; }
 
+.btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #6c757d;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+.btn-back:hover {
+    background-color: #5a6268;
+}
+
 /* --- Halaman Detail --- */
 .detail-container {
   max-width: 800px;
@@ -207,6 +224,12 @@ th { background-color: #f2f2f2; }
 .login-page { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f8f9fa; }
 .login-form-container { background: white; padding: 2rem; border-radius: 10px; box-shadow: var(--shadow); width: 100%; max-width: 400px; text-align: center; }
 .login-form-container .form-group { text-align: left; margin-bottom: 1rem; }
+.login-form-container input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 .btn-submit { width: 100%; padding: 0.8rem; background-color: var(--primary-green); color: white; border: none; border-radius: 5px; font-size: 1rem; cursor: pointer; }
 .btn-submit:disabled { background-color: #6c757d; }
 .btn-edit, .btn-delete, .btn-cancel { padding: 0.6rem 1rem; border-radius: 5px; text-decoration: none; border: none; cursor: pointer; font-weight: 600; }

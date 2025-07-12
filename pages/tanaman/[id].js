@@ -18,6 +18,11 @@ export default function DetailTanaman({ tanaman }) {
   return (
     <Layout title={`${tanaman.nama} - Database TOGA`}>
       <div className="detail-container">
+        <div style={{ marginBottom: '1.5rem' }}>
+              <Link href="/" className="btn-back">
+                  &larr; Kembali ke Daftar
+              </Link>
+        </div>
         <Image
           src={tanaman.gambar || '/placeholder.png'}
           alt={tanaman.nama}

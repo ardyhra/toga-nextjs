@@ -78,11 +78,34 @@ export default function Home({ initialTanaman }) {
       </section>
 
       <nav className="pagination-container">
+        {/* Tombol Previous */}
+        <button 
+          onClick={() => setCurrentPage(prev => prev - 1)} 
+          disabled={currentPage === 1}
+          className="page-btn"
+        >
+          &laquo; Prev
+        </button>
+
+        {/* Tombol Angka Halaman */}
         {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-          <button key={page} onClick={() => setCurrentPage(page)} className={`page-btn ${currentPage === page ? 'active' : ''}`}>
+          <button 
+            key={page} 
+            onClick={() => setCurrentPage(page)} 
+            className={`page-btn ${currentPage === page ? 'active' : ''}`}
+          >
             {page}
           </button>
         ))}
+
+        {/* Tombol Next */}
+        <button 
+          onClick={() => setCurrentPage(prev => prev + 1)}
+          disabled={currentPage === totalPages}
+          className="page-btn"
+        >
+          Next &raquo;
+        </button>
       </nav>
     </Layout>
   );
