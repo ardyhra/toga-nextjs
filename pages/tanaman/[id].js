@@ -2,6 +2,7 @@
 import { createClient } from '@supabase/supabase-js';
 import Layout from '../../components/Layout';
 import Image from 'next/image';
+import Link from 'next/link'; // 
 
 export default function DetailTanaman({ tanaman }) {
   if (!tanaman) {
